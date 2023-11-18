@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->create();
+        User::factory(200)->create();
 
         User::create([
             'name' => 'Syawal Admin',
@@ -21,6 +21,8 @@ class UserSeeder extends Seeder
             // email virifivation
             'email_verified_at' => now(),
             'password' => bcrypt('123456'),
+            // roles
+            'roles' => 'mahasiswa',
         ]);
     }
 }
